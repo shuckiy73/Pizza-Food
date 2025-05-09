@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /login
+Allow: /sign-up
+Allow: /reset-password
+Allow: /checkout
