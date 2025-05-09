@@ -1,0 +1,73 @@
+@import './styles/fonts.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  button {
+    @apply 
+    bg-primary 
+    text-white 
+    py-5 
+    px-10 
+    rounded-[15px]
+    hover:bg-white
+    hover:text-primary
+    border-2
+    border-primary
+    transition-all
+    hover:scale-[1.02]
+    disabled:bg-white
+    disabled:text-gray-300
+    disabled:border-gray-300
+    disabled:hover:bg-white
+    disabled:hover:text-gray-300
+    disabled:hover:scale-100
+  }
+  
+  [type="text"] {
+    @apply h-[48px] px-4 border-[2px] border-gray-200 rounded-[10px] focus:ring-2 focus:outline-none focus:border-blue-500
+  }
+
+  textarea {
+    @apply h-[120px] p-4 border-[2px] border-gray-200 rounded-[10px] focus:ring-2 focus:outline-none focus:border-blue-500
+  }
+
+  [type="checkbox"] {
+   @apply 
+   w-6 h-6 
+   appearance-none
+    rounded-[4px]
+    bg-gray-200
+    cursor-pointer
+ }
+ [type=checkbox]:checked {
+  @apply appearance-auto accent-primary
+ }
+
+ [type=radio] {
+  @apply h-6 w-6 cursor-pointer appearance-none bg-gray-200 rounded-4xl border-white border-2
+ }
+
+ [type=radio]:checked {
+  @apply bg-white shadow-sm border-[7px] border-primary
+ }
+}
+
+
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 1;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
